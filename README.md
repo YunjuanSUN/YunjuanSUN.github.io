@@ -1,76 +1,36 @@
-# glas
-Glas - Rails on Ruby - Jekyll Theme 
-Preview: http://www.spaceg.github.io
+# Jekyll-Uno with Projects as Timeline
+A Jekyll Theme, based on the Uno-Theme with a list of projects as Timeline.
 
-![Alt text](https://raw.githubusercontent.com/SpaceG/glas/master/img/glas_github.png "glas")
+## How does is look
+[Demo](http://thomas.zuehlke.family/)
+![Screenshot](screenshot-overview.png)
+![jekyll-theme-desktop](https://user-images.githubusercontent.com/32843441/72224870-5451ff00-357f-11ea-8fc2-bfbd4499bc63.gif)
+![jekyll-theme-mobil](https://user-images.githubusercontent.com/32843441/72224877-6a5fbf80-357f-11ea-920b-dfae72bf2fbe.gif)
 
+## Installation/Setup
+1. Download or clone repo `git clone https://github.com/tzuehlke/jekyll-uno-timeline.git`
+2. Enter the folder: `cd jekyll-uno-timeline/`
+3. Build it: `jekyll build`
+4. Start Jekyll server: `jekyll serve`
+5. Configure: `_config.yml`
+   * at least set `font_awesome` or download and add the font in `head.html`
 
-GLAS  - DOM Structure
-### Structure ###
-<pre>
-.  
-|-- .sass-cache  
-|-- _data  
-|   |-- organisers.yml
-|-- _includes 
-|   |-- footer.html  
-|   |-- head.html 
-|   `-- header.html   
-|-- _layouts  
-|   |-- about.html  
-|   |-- archive.html 
-|   |-- default.html 
-|   |-- page.html  
-|   `-- post.html  
-|-- _posts  
-|   |-- 2016-01-18-gem-npm-ruby-gems-node.js.md 
-|   `-- 2016-01-18-create-commandlines-for-your-app.md
-|-- _sass
-|-- _assets  
-|   |-- css  
-|   |-- fonts
-|   |-- img
-|   |-- js 
-|   `-- post.html  
-|-- _config.yml 
-|-- _feed.yml       
-`-- index.html  
-</pre>
+Access via: [http://localhost:4000/](http://localhost:4000/)
 
-
-
-Clone to Desktop
-<code>git clone https://github.com/SpaceG/glas.git  </code>
-Delete the cname file. 
-
-by The Way Fork and Star this Theme. Thanks a lot for your Support. 
-if you have any question, take a issue. 
-
-
-<code>cd Desktop </code><br>
-<code>cd glas </code><br>
-<code>$ jekyll serve </code>
-
-watch your localhost <code><strong>127.0.0.1:8000 </strong> </code> 
-
-The MIT License (MIT)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
+## Details/Features/Changes
+* based on the [Uno-Theme](https://github.com/joshgerdes/jekyll-uno), but:
+  * removed everything with posts
+  * `content-wrapper` can be shown or hidden with button
+  * changed all icons to [Font-Awesome](https://fontawesome.com/)
+  * updated google-analytics snipped
+  * added [Meetup-Link](https://www.meetup.com/)
+  * removed RSS
+  * removed Disqus
+  * using a Timeline-Design instead of posts, therefore no pagination anymore
+* using Timeline ([CSS](https://github.com/le4ker/personal-jekyll-theme/blob/master/css/timeline.scss), [HTML](https://github.com/le4ker/personal-jekyll-theme/blob/master/_includes/timeline.html) ) from [{ Personal } Jekyll Theme](https://github.com/le4ker/personal-jekyll-theme) for a list of projects, but:
+  * still with 3 layouts for different screen-width, but without images on small screens
+  * timeline information source is now `_data/projects.yaml`
+  * always using the `timeline-inverted`-class, for text on the right side of the images
+* using [github_api.js](https://github.com/jarrekk/Jalpc/blob/master/static/js/github_api.js) from [Jalpc.](https://github.com/jarrekk/Jalpc), but:
+  * changed the GitHub-URL for using with persons and organisations
+  * added watchers number
